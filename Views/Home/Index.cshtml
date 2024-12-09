@@ -1,0 +1,20 @@
+﻿<div class="row">
+    @foreach (var item in Model) {
+        <div class="col-4">
+            <div class="card">
+                <img src="~/images/@item.Img" class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                    <div class="row">
+                        <h5 class="card-title col-9">@item.Name</h5>
+                        <span class="col-3">Rate @item.Rate</span>
+                    </div>                   
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <span>Price : @item.Price</span>
+                    <br />
+                    <br />
+                    <a href="https://localhost:7241/home/details?productId=@item.Id" class="btn btn-primary">Show Details</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
